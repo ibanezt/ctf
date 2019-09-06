@@ -18,7 +18,13 @@ We can clean up the debug ouput adding a force_escape filter and pre tags:
 ```
 Which gives us the following:
 ```
-	{'block': <Block Node: content. Contents: [<TextNode: u'\n<pre>'>, <django.template.defaulttags.FilterNode object at 0x7f135efbb3d0>, <TextNode: u'</pre>\n'>]>}{'block': <Block Node: body. Contents: [<TextNode: u'\n<div class="container">\n'>, <Block Node: content. Contents: [<TextNode: u'\n            <h1>Example '>]>, <TextNode: u'\n\n        </div>\n    </di'>]>}{}{'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10,
+	{'block': <Block Node: content. Contents: [<TextNode: u'\n<pre>'>
+    <django.template.defaulttags.FilterNode object at 0x7f135efbb3d0>
+    <TextNode: u'</pre>\n'>]>}{'block': <Block Node: body. Contents:
+    [<TextNode: u'\n<div class="container">\n'>,
+    <Block Node: content. Contents: [<TextNode: u'\n            <h1>Example '>]>,
+    <TextNode: u'\n\n        </div>\n    </di'>]>}{}
+    {'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10,
 								'ERROR': 40,
 								'INFO': 20,
 								'SUCCESS': 25,
