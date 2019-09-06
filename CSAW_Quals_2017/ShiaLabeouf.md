@@ -126,14 +126,14 @@ Visiting this 3rd poll gives us an exception, but in the traceback, I noticed th
 def getme(value, arg):
     return getattr(value, arg)
 @register.filter(name='checknum')
-	def checknum(value):
-        check(value) 
+def checknum(value):
+    check(value) 
 @register.filter(name='listme')
-	def listme(value):
-        return dir(value)
-	def check(value):
-        if value > 2:
-            raise Exception("Our infrastructure can't support that many Shias!")
+def listme(value):
+    return dir(value)
+def check(value):
+    if value > 2:
+        raise Exception("Our infrastructure can't support that many Shias!")
 ```
 Having spent the last couple hours learning Django template tags and filters, I recognized these as Django template filter definitions, exposing some python functions, **dir** and **getattr**.
 
